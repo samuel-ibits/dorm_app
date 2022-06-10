@@ -6,7 +6,7 @@
 $page= $_COOKIE['dormpage'];
 $tokenid =$_COOKIE['dormtoken'];
  echo $userid.$tokenid.$page;
- 
+ echo'helo';
 if($page=="studytools.html"){
     
     include ../studytools.html;
