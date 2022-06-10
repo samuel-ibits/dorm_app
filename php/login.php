@@ -10,7 +10,7 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p;
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
-	echo $result;
+	//echo $result;
 	echo "<table>";
 	echo "<tr><td>Order ID:</td><td>$result->userid</td></tr>";
 	
