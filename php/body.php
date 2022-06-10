@@ -1,14 +1,17 @@
 <?php
-if(!isset($_COOKIE[$dorm_tokinid])) {
 
-$page=$_COOKIE['dormpage'];
+
+    $userid= $_COOKIE["dormuserid"];
+
+$page= $_COOKIE['dormpage'];
 $tokenid =$_COOKIE['dormtoken'];
 
-if($page=="studytools"){
-
+if($page=="studytools.html"){
+    
     include ../studytools.html;
 
 }
+
 if($page=="review"){
     
     include studytools.html;
@@ -39,7 +42,6 @@ if($page=="market"){
 
 
 
-}
 
 
 ?>
