@@ -122,21 +122,21 @@
         <img src="images/dorm_no_bg.png" alt="">
     </div>
 
-    <form action="" id="login">
+    <form action="php/login.php" method="post" id="login">
 
         <h2>Sign in</h2>
 
         <div class="input-wrapper">
-            <i class="bi bi-person-fill"></i> <input type="text" id="useraname" placeholder="User Name or Phone Number">
+            <i class="bi bi-person-fill"></i> <input type="text" id="useraname" placeholder="User Name or Phone Number" name="phone">
         </div>
 
 
         <div class="input-wrapper">
-            <i class="bi bi-lock-fill"></i> <input type="password" id="password" placeholder="Password">
+            <i class="bi bi-lock-fill"></i> <input type="password" id="password" placeholder="Password" name="pass">
         </div>
 
         <div class="login-btn">
-            <button onclick="confirmlogin()" class="login-button">
+            <button type="submit" onclick="confirmlogin()" class="login-button" name="submit">
                 SIGN IN
             </button>
         </div>
