@@ -18,4 +18,7 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p;
 	echo "<tr><td>Response Desc:</td><td>$result->response_desc</td></tr>";
 	echo "</table>";
 
+	if($result->response_code==200){
+Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/studytools.php";</script>';
+	}
     ?>
