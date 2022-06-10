@@ -3,12 +3,6 @@
 $u=$_POST['phone'];
 $p=$_POST['pass'];
 
-$postRequest = array(
-    'phone' => $u,
-    'pass' => $p
-);
-
-
 $url = "https://api.dorm.com.ng/loginapi.php?phone".$u."&pass".$p;
 	
 	$client = curl_init($url);
