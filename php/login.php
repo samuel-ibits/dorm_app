@@ -4,8 +4,8 @@ $u=$_POST['phone'];
 $p=$_POST['pass'];
 
 $postRequest = array(
-    'firstFieldData' => $u,
-    'secondFieldData' => $p
+    'phone' => $u,
+    'pass' => $p
 );
 
 $cURLConnection = curl_init('https://api.dorm.com.ng/loginapi.php');
