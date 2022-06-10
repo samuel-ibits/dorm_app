@@ -8,14 +8,20 @@ $postRequest = array(
     'pass' => $p
 );
 
-$cURLConnection = curl_init('https://api.dorm.com.ng/loginapi.php');
-curl_setopt($cURLConnection, CURLOPT_POSTFIELDS, $postRequest);
-curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
 
-$apiResponse = curl_exec($cURLConnection);
-curl_close($cURLConnection);
+$url = "https://api.dorm.com.ng/loginapi.php".$u;
+	
+	$client = curl_init($url);
+	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
+	$response = curl_exec($client);
+	
+	$result = json_decode($response);
+	
+	echo "<table>";
+	echo "<tr><td>Order ID:</td><td>$result->order_id</td></tr>";
+	echo "<tr><td>Amount:</td><td>$result->amount</td></tr>";
+	echo "<tr><td>Response Code:</td><td>$result->response_code</td></tr>";
+	echo "<tr><td>Response Desc:</td><td>$result->response_desc</td></tr>";
+	echo "</table>";
 
-// $apiResponse - available data from the API request
-$jsonArrayResponse - json_decode($apiResponse);
-echo $jsonArrayResponse;
-?>
+    ?>
