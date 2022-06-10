@@ -16,7 +16,7 @@ $url = "https://api.dorm.com.ng/loginapi.php".$u;
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
-	
+	echo $result;
 	echo "<table>";
 	echo "<tr><td>Order ID:</td><td>$result->order_id</td></tr>";
 	echo "<tr><td>Amount:</td><td>$result->amount</td></tr>";
