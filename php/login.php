@@ -17,8 +17,15 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p;
 	echo "<tr><td>Response Code:</td><td>$result->response_code</td></tr>";
 	echo "<tr><td>Response Desc:</td><td>$result->response_desc</td></tr>";
 	echo "</table>";
+	
 
+	setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
+	setcookie("dormtoken", $result->tokenid, time() + (86400 * 30), "/"); // 86400 = 1 day
+	setcookie("dormpage", "studytools.html", time() + (86400 * 30), "/"); // 86400 = 1 day
+	
+	
+	?>
 	if($result->response_code==200){
-Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/studytools.php";</script>';
+Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/php/main.php";</script>';
 	}
     ?>
