@@ -8,7 +8,7 @@ $tokenid =$_COOKIE['dormtoken'];
  
 if($page=="studytools.html"){
     
-    include '../studytools.html';
+    include '../accomodia.html';
 
 }
 
