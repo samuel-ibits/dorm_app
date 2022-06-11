@@ -9,6 +9,7 @@ $tokenid =$_COOKIE['dormtoken'];
 if($page=="studytools.html"){
     include '../css/coursereview.css';
     include '../coursereview.html';
+    
 
 }
 
