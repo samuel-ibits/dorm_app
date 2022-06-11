@@ -9,33 +9,33 @@ $tokenid =$_COOKIE['dormtoken'];
  echo'helo';
 if($page=="studytools.html"){
     
-    include ../studytools.html;
+    include '../studytools.html';
 
 }
 
 if($page=="review"){
     
-    include studytools.html;
+    include 'studytools.html';
 
 }
  
 
 if($page=="texter"){
     
-    include studytools.html;
+    include 'studytools.html';
 
 }
 
 if($page=="acommodia"){
     
-    include studytools.html;
+    include 'studytools.html';
 
 }
 
 
 if($page=="market"){
     
-    include studytools.html;
+    include 'studytools.html';
 
 }
 
