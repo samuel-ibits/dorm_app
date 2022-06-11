@@ -21,6 +21,6 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p;
 	
 	?>
 	if($result->response_code==200){
-Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/php/main.php";</script>';
+Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/main.php";</script>';
 	}
     ?>
