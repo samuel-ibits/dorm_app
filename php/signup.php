@@ -1,4 +1,12 @@
 <?php 
+
+function isDigits($telephone, $minDigits, $maxDigits){
+	
+	if(is_numeric($telephone) and ($telephone>=$minDigits or $telephone<=$maxDigits)){
+		return 1;
+	}else{return 0;}
+}
+
 function isValidTelephoneNumber(string $telephone, int $minDigits = 9, int $maxDigits = 14): bool {
     if (preg_match('/^[+][0-9]/', $telephone)) { //is the first character + followed by a digit
         $count = 1;
