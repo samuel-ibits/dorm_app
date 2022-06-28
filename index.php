@@ -1,3 +1,6 @@
+<?php include '../php/autologin.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="css/loginandreg.css">
+    <link rel="stylesheet" href="/css/loginandreg.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
+    <!-- forgot password -->
     <div class="forgot-password-holder">
         <div class="forgot-password-div">
             <div class="center-forgot">
@@ -89,7 +93,7 @@
     <div class="forgot-password-holder-bg">
 
     </div>
-
+<!-- login -->
     <div class="screen-container">
         <div class="sub-screen-container">
             <div class="blue">
@@ -110,17 +114,17 @@
                     <img src="images/dorm_no_bg.png" alt="">
                 </div>
                 <p class="welcome-txt hide-on-big-screen">Hello, welcome</p>
-                <form action="studytools.html">
+                <form method="post" action="php/login.php">
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input type="text" placeholder="Username or Phone number">
+                        <ion-icon name="person"></ion-icon> <input name="phone" type="text" placeholder="Username or Phone number">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text" placeholder="Password">
+                        <ion-icon name="lock-open"></ion-icon> <input name="pass" type="text" placeholder="Password">
                     </div>
 
                     <div class="input-holder">
-                        <button>SIGN IN</button>
+                        <button type="submit">SIGN IN</button>
                     </form>
                         <button  class="btn hide-on-big-screen">
                             <ion-icon name="logo-google"></ion-icon>
@@ -137,7 +141,7 @@
                
             </div>
         </div>
-
+<!-- signu up -->
         <div class="sub-screen-container registration">
             <div class="center">
                 <div class="top-form-logo-2">
