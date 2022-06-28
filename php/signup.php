@@ -1,59 +1,78 @@
 <?php 
-// function isValidTelephoneNumber(string $telephone, int $minDigits = 9, int $maxDigits = 14): bool {
-//     if (preg_match('/^[+][0-9]/', $telephone)) { //is the first character + followed by a digit
-//         $count = 1;
-//         $telephone = str_replace(['+'], '', $telephone, $count); //remove +
-//     }
+function isValidTelephoneNumber(string $telephone, int $minDigits = 9, int $maxDigits = 14): bool {
+    if (preg_match('/^[+][0-9]/', $telephone)) { //is the first character + followed by a digit
+        $count = 1;
+        $telephone = str_replace(['+'], '', $telephone, $count); //remove +
+    }
     
-//     //remove white space, dots, hyphens and brackets
-//     $telephone = str_replace([' ', '.', '-', '(', ')'], '', $telephone); 
+    //remove white space, dots, hyphens and brackets
+    $telephone = str_replace([' ', '.', '-', '(', ')'], '', $telephone); 
 
-//     //are we left with digits only?
-//     return isDigits($telephone, $minDigits, $maxDigits); 
-// }
+    //are we left with digits only?
+    return isDigits($telephone, $minDigits, $maxDigits); 
+}
 
-// function normalizeTelephoneNumber(string $telephone): string {
-//     //remove white space, dots, hyphens and brackets
-//     $telephone = str_replace([' ', '.', '-', '(', ')'], '', $telephone);
-//     return $telephone;
-// }
-
-// $tel = '+9112 345 6789';
-// if (isValidTelephoneNumber($tel)) {
-//     //normalize telephone number if needed
-//     echo normalizeTelephoneNumber($tel); //+91123456789
-// }
+function normalizeTelephoneNumber(string $telephone): string {
+    //remove white space, dots, hyphens and brackets
+    $telephone = str_replace([' ', '.', '-', '(', ')'], '', $telephone);
+    return $telephone;
+}
 
 
+normalizeTelephoneNumber("457406 4974 3895");
+
+// $data['email']=$_POST['email'];
+
+// $data['fname']=$_POST['fname'];
+// $data['lname'] =$_POST['lname'];
+
+// $tel=$_POST['phone'];
+// if (isValidTelephoneNumber($tel)) {   
+// 	 //normalize telephone number if needed
+// 	$phone= normalizeTelephoneNumber($tel); //+91123456789
+// 	 }else{
+// 		$phone= $tel;
+// 	 }
+	
+// 	 $data['phone'] =$phone;
+
+
+// $data['uname']=$_POST['uname'];
+// $pas=$_POST['pass'];
+// $repass=$_POST['repass'];
+// if ($pas==$repass ){
+// 	$data['pass']=$_POST['pass'];}
+	
+// // $data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
 
 
 
-$url = "http://www.api.dorm.com.ng/signupapi.php";
 
-$curl = curl_init($url);
-curl_setopt($curl, CURLOPT_URL, $url);
-curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+// $url = "http://www.api.dorm.com.ng/signupapi.php";
 
-   header("Access-Control-Allow-Origin: *");
-   header("Content-Type: application/json; charset=UTF-8");
-   header("Access-Control-Allow-Methods: POST");
-   header("Access-Control-Max-Age: 3600");
-   header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+// $curl = curl_init($url);
+// curl_setopt($curl, CURLOPT_URL, $url);
+// curl_setopt($curl, CURLOPT_POST, true);
+// curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+//    header("Access-Control-Allow-Origin: *");
+//    header("Content-Type: application/json; charset=UTF-8");
+//    header("Access-Control-Allow-Methods: POST");
+//    header("Access-Control-Max-Age: 3600");
+//    header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
   
-curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+// curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-$data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
 
-curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+// curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
-//for debug only!
-curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
-curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+// //for debug only!
+// curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+// curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
-$resp = curl_exec($curl);
-curl_close($curl);
-var_dump($resp);
+// $resp = curl_exec($curl);
+// curl_close($curl);
+// var_dump($resp);
 
 ?>
 
