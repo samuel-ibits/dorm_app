@@ -43,7 +43,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-$data = '{ "email":"ibito@fd.com" , "fname": "samuel" }';
+$data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
 
 curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
@@ -103,4 +103,4 @@ $url = "https://api.dorm.com.ng/signupapi.php?phone=".$u."&pass=".$p;
 	if($result->response_code==200){
 Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/main.php";</script>';
 	} -->
-    ?>
+    <!-- ?> -->
