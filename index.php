@@ -151,29 +151,29 @@
                     <img src="images/dorm_no_bg.png" alt="">
                 </div>
 
-                <form action="">
+                <form action="../php/signup.php">
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input type="text" placeholder="First name">
+                        <ion-icon name="person"></ion-icon> <input type="text" name="fname" placeholder="First name">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input type="text" placeholder="Surname">
-                    </div>
-
-                    <div class="input-holder">
-                        <ion-icon name="mail"></ion-icon> <input type="email" placeholder="Mail">
+                        <ion-icon name="person"></ion-icon> <input type="text"   name="lname" placeholder="Surname">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="call"></ion-icon> <input type="number" placeholder="Phone number">
+                        <ion-icon name="mail"></ion-icon> <input type="email"   name="email"  placeholder="Mail">
+                    </div>
+
+                    <div class="input-holder">
+                        <ion-icon name="call"></ion-icon> <input type="number"  name="phone" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text" placeholder="Password">
+                        <ion-icon name="lock-open"></ion-icon> <input type="password"  name="pass" placeholder="Password">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text" placeholder="Re-type assword">
+                        <ion-icon name="lock-open"></ion-icon> <input type="password"   name="repass"  placeholder="Re-type assword">
                     </div>
                     <div class="input-holder">
-                        <button class="sign-up-btn">SIGN UP</button>
+                        <button type="submit" class="sign-up-btn">SIGN UP</button>
                     </div>
 
                 </form>
