@@ -2,7 +2,7 @@
 
 function isDigits($telephone, $minDigits, $maxDigits){
 	
-	if(is_numeric($telephone) and ($telephone>=$minDigits or $telephone<=$maxDigits)){
+	if(is_numeric($telephone) and ($telephone>=$minDigits and $telephone<=$maxDigits)){
 		return 1;
 	}else{return 0;}
 }
