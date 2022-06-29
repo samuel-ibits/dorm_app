@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    
+
     <!-- forgot password -->
     <div class="forgot-password-holder">
         <div class="forgot-password-div">
@@ -75,11 +75,11 @@
                 <form action="#!" class="forgot-password-form-3">
                     <h4>STEP 3</h4>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text" placeholder="New password">
+                        <ion-icon name="lock-open"></ion-icon> <input type="password" placeholder="New password">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text" placeholder="Confirm password">
+                        <ion-icon name="lock-open"></ion-icon> <input type="password" placeholder="Confirm password">
                     </div>
                     <div class="input-holder">
                         <button class="sign-up-btn">SET PASSWORD</button>
@@ -121,7 +121,7 @@
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input name="pass" type="text" placeholder="Password">
+                        <ion-icon name="lock-open"></ion-icon> <input name="pass" type="password" placeholder="Password">
                     </div>
 
                     <div class="input-holder">
