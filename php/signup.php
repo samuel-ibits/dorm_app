@@ -79,15 +79,17 @@ curl_close($curl);
 
 
 $result=json_decode($resp);
-setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
-	setcookie("dormtoken", $result->tokenid, time() + (86400 * 30), "/"); // 86400 = 1 day
-	setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/"); // 86400 = 1 day
 	
 	if($result->response_code==200){
-		header('Location: https://www.app.dorm.com.ng/studytools.php');
+        setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
+        setcookie("dormtoken", $result->tokenid, time() + (86400 * 30), "/"); // 86400 = 1 day
+        setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/"); // 86400 = 1 day
+    
+        header('Location: https://www.app.dorm.com.ng/studytools.php');
 	}
     if($result->response_code==400){
 	echo "<script> alert('Some Error occured while creating an account. Try again later'); </script>";
+    
     header('Location: https://www.app.dorm.com.ng');
 }
 	
