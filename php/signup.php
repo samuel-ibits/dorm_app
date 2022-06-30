@@ -85,7 +85,8 @@ setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 =
 	
 	if($result->response_code==200){
 		header('Location: https://www.app.dorm.com.ng/studytools.php');
-	}
+	}else{echo $err2.$result->response_code;
+    }
 	
 
 ?>
