@@ -168,7 +168,7 @@
                         <ion-icon name="call"></ion-icon> <input type="number"  name="phone" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text"  name="uname" placeholder="Password">
+                        <ion-icon name="lock-open"></ion-icon> <input type="text"  name="uname" placeholder="Username">
                     </div>
                     <div class="input-holder">
                         <ion-icon name="lock-open"></ion-icon> <input type="password"  name="pass" placeholder="Password">
