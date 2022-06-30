@@ -31,28 +31,25 @@ function normalizeTelephoneNumber(string $telephone): string {
 
 // $data['email']=$_POST['email'];
 
-// $data['fname']=$_POST['fname'];
-// $data['lname'] =$_POST['lname'];
-
-// $tel=$_POST['phone'];
-// if (isValidTelephoneNumber($tel)) {   
-// 	 //normalize telephone number if needed
-// 	$phone= normalizeTelephoneNumber($tel); //+91123456789
-// 	 }else{
-// 		$phone= $tel;
-// 	 }
+$tel=$_POST['phone'];
+if (isValidTelephoneNumber($tel)) {   
+	 //normalize telephone number if needed
+	$phone= normalizeTelephoneNumber($tel); //+91123456789
+	 }else{
+		$phone= $tel;
+	 }
 	
-// 	 $data['phone'] =$phone;
 
+$pas=$_POST['pass'];
+$repass=$_POST['repass'];
+if ($pas==$repass ){
+	$data['pass']=$_POST['pass'];}else{
 
-// $data['uname']=$_POST['uname'];
-// $pas=$_POST['pass'];
-// $repass=$_POST['repass'];
-// if ($pas==$repass ){
-// 	$data['pass']=$_POST['pass'];}
+        $err2="password does not match";
+    }
 	
- $data = '{ "email": "'.$_POST['email'].'", "fname": "'.$_POST['fname'].'" , "phone": "'.$_POST['phone'].'", "uname": "'.$_POST['uname'].'", "pass": "'.$_POST['pass'].'" }';
-print_r($data);
+ $data = '{ "email": "'.$_POST['email'].'", "fname": "'.$_POST['fname'].'" , "phone": "'.$phone.'", "uname": "'.$_POST['uname'].'", "pass": "'.$_POST['pass'].'" }';
+
 
 
 $url = "http://www.api.dorm.com.ng/signupapi.php";
@@ -79,7 +76,7 @@ curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
 $resp = curl_exec($curl);
 curl_close($curl);
-var_dump($resp);
+
 
 $result=json_decode($resp);
 setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -87,8 +84,8 @@ setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 =
 	setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/"); // 86400 = 1 day
 	
 	if($result->response_code==200){
-		Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/main.php";</script>';
-			}
+		header('Location: https://www.app.dorm.com.ng/studytools.php');
+	}
 	
 
 ?>
