@@ -41,7 +41,7 @@ if (isValidTelephoneNumber($tel)) {
 	 }else{
 		$phone= $tel;
 	 }
-	
+	echo $phone;
 	 $data['phone'] =$phone;
 
 
@@ -82,7 +82,7 @@ $resp = curl_exec($curl);
 curl_close($curl);
 var_dump($resp);
 
-
+$result=json_decode($resp);
 setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
 	setcookie("dormtoken", $result->tokenid, time() + (86400 * 30), "/"); // 86400 = 1 day
 	setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -93,3 +93,4 @@ setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 =
 	
 
 ?>
+
