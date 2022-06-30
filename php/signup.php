@@ -41,7 +41,7 @@ if (isValidTelephoneNumber($tel)) {
 	 }else{
 		$phone= $tel;
 	 }
-	echo $phone;
+	
 	 $data['phone'] =$phone;
 
 
@@ -52,8 +52,7 @@ if ($pas==$repass ){
 	$data['pass']=$_POST['pass'];}
 	
 // $data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
-
-
+echo $data;
 
 
 $url = "http://www.api.dorm.com.ng/signupapi.php";
