@@ -82,52 +82,14 @@ $resp = curl_exec($curl);
 curl_close($curl);
 var_dump($resp);
 
-?>
 
-
-
-
-<!-- 
-
-
-$email=$_POST['email'];
-
-$fname=$_POST['fname'];
-$lname=$_POST['lname'];
-$fulname=$fname." ". $lname;
-$phon=$_POST['phone'];
-$ch=strlen($phon);
-$chh=is_numeric($phon);
-if($ch<11 OR $ch>11 OR $chh!=1 ){$err=" Invalid phone-number";
-}else{$phone=$phon;$err="";} 
-$uname=$_POST['uname'];
-$pas=$_POST['pass'];
-$repass=$_POST['repass'];
-if ($pas==$repass AND $err==""){$pass=$_POST['pass'];	$err2="";
-$pockid='pocket'.rand();
-$userid='user'.rand();
-$tokenid= 'a'.$phone.$pass;
- $date= date("Y-m-d h:i:sa");
-
-
-$url = "https://api.dorm.com.ng/signupapi.php?phone=".$u."&pass=".$p;
-	
-	$client = curl_init($url);
-	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
-	$response = curl_exec($client);
-	
-	$result = json_decode($response);
-	//echo $result;
-	
-	
-
-	setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
+setcookie("dormuserid", $result->userid, time() + (86400 * 30), "/"); // 86400 = 1 day
 	setcookie("dormtoken", $result->tokenid, time() + (86400 * 30), "/"); // 86400 = 1 day
 	setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/"); // 86400 = 1 day
 	
-	
-	?>
 	if($result->response_code==200){
-Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/main.php";</script>';
-	} -->
-    <!-- ?> -->
+		Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/main.php";</script>';
+			}
+	
+
+?>
