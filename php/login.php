@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 	
 $u=$_POST['phone'];
