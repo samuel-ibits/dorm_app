@@ -67,7 +67,7 @@
                         
                     <div class="btn-1"><ion-icon name="alert"></ion-icon></div>
 
-                    If you did not get the sms with 3(three) minutes, please send "forgot password,username,phonenumber" to <span>08151519625</span> with your phone number to get your new password
+                    If you did not get the sms within 3(three) minutes, please send "forgot password,[your_username],[your_phonenumber]" to <span>08151519625</span> with your phone number to get your new password
                     </div>
                     
                 </form>
@@ -194,9 +194,30 @@
 
 
         $(".get-code").click(function () {
+    const api_url = "https://api.dorm.com.ng/otpapi.php?u=sammy&phone=samm";
+
+async function getUser() {
+
+	const response = await fetch(api_url, {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    }
+});
+
+	// Parsing it to JSON format
+	const data = await response.json();
+	document.cookie = "vercode="+data.vercode+"; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+	
+}
         $(".forgot-password-form-1").fadeOut('fast');
         $(".forgot-password-form-2").fadeIn('fast');
         $(".forgot-password-form-3").fadeOut('fast');
+
         });
 
 
