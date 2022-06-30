@@ -36,11 +36,11 @@
                 <form action="#!" class="forgot-password-form-1">
                     <h4>STEP 1</h4>
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input type="text" placeholder="Username">
+                        <ion-icon name="person"></ion-icon> <input required type="text" placeholder="Username">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="call"></ion-icon> <input type="text" placeholder="Phone number">
+                        <ion-icon name="call"></ion-icon> <input required type="text" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
                         <button type=submit class="sign-up-btn get-code">GET CODE</button>
@@ -55,7 +55,7 @@
                     <h4>STEP 2</h4>
                     <div class="btn-1"><ion-icon name="alert"></ion-icon></div>
                     <div class="input-holder">
-                        <ion-icon name="qr-code"></ion-icon> <input type="number" placeholder="Enter 4-digit code">
+                        <ion-icon name="qr-code"></ion-icon> <input required type="number" placeholder="Enter 4-digit code">
                     </div>
 
                     <div class="input-holder">
@@ -75,11 +75,11 @@
                 <form action="#!" class="forgot-password-form-3">
                     <h4>STEP 3</h4>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="password" placeholder="New password">
+                        <ion-icon name="lock-open"></ion-icon> <input required type="password" placeholder="New password">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="password" placeholder="Confirm password">
+                        <ion-icon name="lock-open"></ion-icon> <input required type="password" placeholder="Confirm password">
                     </div>
                     <div class="input-holder">
                         <button class="sign-up-btn">SET PASSWORD</button>
@@ -117,11 +117,11 @@
                 <p class="welcome-txt hide-on-big-screen">Hello, welcome</p>
                 <form method="post" action="php/login.php">
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input name="phone" type="text" placeholder="Username or Phone number">
+                        <ion-icon name="person"></ion-icon> <input required name="phone" type="text" placeholder="Username or Phone number">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input name="pass" type="password" placeholder="Password">
+                        <ion-icon name="lock-open"></ion-icon> <input required name="pass" type="password" placeholder="Password">
                     </div>
 
                     <div class="input-holder">
@@ -154,27 +154,27 @@
 
                 <form method="post" action="../php/signup.php">
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input type="text" name="fname" placeholder="First name">
+                        <ion-icon name="person"></ion-icon> <input required type="text" name="fname" placeholder="First name">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input type="text"   name="lname" placeholder="Surname">
-                    </div>
-
-                    <div class="input-holder">
-                        <ion-icon name="mail"></ion-icon> <input type="email"   name="email"  placeholder="Mail">
+                        <ion-icon name="person"></ion-icon> <input required type="text"   name="lname" placeholder="Surname">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="call"></ion-icon> <input type="number"  name="phone" placeholder="Phone number">
+                        <ion-icon name="mail"></ion-icon> <input required type="email"   name="email"  placeholder="Mail">
+                    </div>
+
+                    <div class="input-holder">
+                        <ion-icon name="call"></ion-icon> <input required type="number"  name="phone" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="text"  name="uname" placeholder="Username">
+                        <ion-icon name="lock-open"></ion-icon> <input required type="text"  name="uname" placeholder="Username">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="password"  name="pass" placeholder="Password">
+                        <ion-icon name="lock-open"></ion-icon> <input required type="password"  name="pass" placeholder="Password">
                     </div>
                     <div class="input-holder">
-                        <ion-icon name="lock-open"></ion-icon> <input type="password"   name="repass"  placeholder="Re-type assword">
+                        <ion-icon name="lock-open"></ion-icon> <input required type="password"   name="repass"  placeholder="Re-type assword">
                     </div>
                     <div class="input-holder">
                         <button type="submit" class="sign-up-btn">SIGN UP</button>
