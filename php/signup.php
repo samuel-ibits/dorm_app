@@ -52,7 +52,7 @@ if ($pas==$repass ){
 	$data['pass']=$_POST['pass'];}
 	
 // $data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
-echo $data;
+print_r($data);
 
 
 $url = "http://www.api.dorm.com.ng/signupapi.php";
