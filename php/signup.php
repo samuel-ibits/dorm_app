@@ -51,7 +51,7 @@ function normalizeTelephoneNumber(string $telephone): string {
 // if ($pas==$repass ){
 // 	$data['pass']=$_POST['pass'];}
 	
- $data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
+ $data = '{ "email": "'.$_POST['email'].'", "fname": "'.$_POST['fname'].'" , "phone": "'.$_POST['phone'].'", "uname": "'.$_POST['uname'].'", "pass": "'.$_POST['pass'].'" }';
 print_r($data);
 
 
