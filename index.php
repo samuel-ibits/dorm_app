@@ -43,7 +43,7 @@
                         <ion-icon name="call"></ion-icon> <input type="text" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
-                        <button class="sign-up-btn get-code">GET CODE</button>
+                        <button type=submit class="sign-up-btn get-code">GET CODE</button>
                     </div>
 
                     <p class="forgot-password">
