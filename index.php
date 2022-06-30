@@ -152,7 +152,7 @@
                     <img src="images/dorm_no_bg.png" alt="">
                 </div>
 
-                <form action="../php/signup.php">
+                <form method="post" action="../php/signup.php">
                     <div class="input-holder">
                         <ion-icon name="person"></ion-icon> <input type="text" name="fname" placeholder="First name">
                     </div>
