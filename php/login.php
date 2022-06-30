@@ -4,7 +4,7 @@
 $u=$_POST['phone'];
 $p=$_POST['pass'];
 
-$url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p;
+$url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p."";
 	
 	$client = curl_init($url);
 	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
