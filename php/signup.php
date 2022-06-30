@@ -29,29 +29,29 @@ function normalizeTelephoneNumber(string $telephone): string {
 
 
 
-$data['email']=$_POST['email'];
+// $data['email']=$_POST['email'];
 
-$data['fname']=$_POST['fname'];
-$data['lname'] =$_POST['lname'];
+// $data['fname']=$_POST['fname'];
+// $data['lname'] =$_POST['lname'];
 
-$tel=$_POST['phone'];
-if (isValidTelephoneNumber($tel)) {   
-	 //normalize telephone number if needed
-	$phone= normalizeTelephoneNumber($tel); //+91123456789
-	 }else{
-		$phone= $tel;
-	 }
+// $tel=$_POST['phone'];
+// if (isValidTelephoneNumber($tel)) {   
+// 	 //normalize telephone number if needed
+// 	$phone= normalizeTelephoneNumber($tel); //+91123456789
+// 	 }else{
+// 		$phone= $tel;
+// 	 }
 	
-	 $data['phone'] =$phone;
+// 	 $data['phone'] =$phone;
 
 
-$data['uname']=$_POST['uname'];
-$pas=$_POST['pass'];
-$repass=$_POST['repass'];
-if ($pas==$repass ){
-	$data['pass']=$_POST['pass'];}
+// $data['uname']=$_POST['uname'];
+// $pas=$_POST['pass'];
+// $repass=$_POST['repass'];
+// if ($pas==$repass ){
+// 	$data['pass']=$_POST['pass'];}
 	
-// $data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
+ $data = '{ "email":"ibito@fd.com" , "fname": "samuel" , "phone": "samuel", "uname": "samuel", "pass": "samuel"   }';
 print_r($data);
 
 
