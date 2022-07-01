@@ -72,7 +72,7 @@
                     
                 </form>
 
-                <form action="#!" class="forgot-password-form-3">
+                <form  method="post" action="php/resetpassword.php" class="forgot-password-form-3">
                     <h4>STEP 3</h4>
                     <div class="input-holder">
                         <ion-icon name="lock-open"></ion-icon> <input required type="password" placeholder="New password">
@@ -211,7 +211,7 @@ async function getUser() {
 
 	// Parsing it to JSON format
 	const data = await response.json();
-	document.cookie = "vercode="+data.vercode+"; expires=Thu, 18 Dec 2013 12:00:00 UTC";
+	document.cookie = "vercode="+data.vercode+; 
 	
 }
         $(".forgot-password-form-1").fadeOut('fast');
@@ -222,6 +222,7 @@ async function getUser() {
 
 
         $(".verify").click(function () {
+
         $(".forgot-password-form-1").fadeOut('fast');
         $(".forgot-password-form-2").fadeOut('fast');
         $(".forgot-password-form-3").fadeIn('fast');
