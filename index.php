@@ -194,7 +194,7 @@
 
 
         $(".get-code").click(function () {
-    const api_url = "https://api.dorm.com.ng/otpapi.php?u=sammy&phone=samm";
+    const api_url = "https://api.dorm.com.ng/otpapi.php?phone=08151519625&uname=samm";
 
 async function getUser() {
 
