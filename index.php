@@ -212,7 +212,7 @@ async function getUser() {
 	// Parsing it to JSON format
 	const data = await response.json();
 	document.cookie = "vercode="+data.vercode+; 
-	
+	console.log(data.vercode);
 }
         $(".forgot-password-form-1").fadeOut('fast');
         $(".forgot-password-form-2").fadeIn('fast');
