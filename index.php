@@ -43,7 +43,7 @@
                         <ion-icon name="call"></ion-icon> <input required type="text" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
-                        <button type=submit class="sign-up-btn get-code">GET CODE</button>
+                        <button type=submit onclick="getcode()" class="sign-up-btn get-code">GET CODE</button>
                     </div>
 
                     <p class="forgot-password">
@@ -185,6 +185,26 @@
         </div>
     </div>
 
+    <script type="text/Javascript">
+function getcode(can){
+var u=document.getElementById('uname').value;
+
+var p=document.getElementById('phone').value;
+var ndel= can.id;
+var xhttps= new XMLHttpRequest();
+xhttps.onreadystatechange= function(){
+	if(xhttps.readyState == 4 && xhttps.status == 200){
+document.getElementById("deletemess").innerHTML=xhttps.responseText;
+
+}
+};
+
+xhttps.open("GET", "https://api.dorm.com.ng/otpapi.php?phone="+p+"&uname="+u+"", true);
+xhttps.send();
+
+}
+</script>
+
     <script>
         $(".forgot-password-holder").fadeOut('slow');
         $(".forgot-password-holder-bg").fadeOut('slow');
@@ -194,26 +214,7 @@
 
 
         $(".get-code").click(function () {
-    const api_url = "https://api.dorm.com.ng/otpapi.php?phone=08151519625&uname=samm";
-
-async function getUser() {
-
-	const response = await fetch(api_url, {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    }
-});
-
-	// Parsing it to JSON format
-	const data = await response.json();
-	document.cookie = "vercode="+data.vercode+; 
-	console.log(data.vercode);
-}
+   
         $(".forgot-password-form-1").fadeOut('fast');
         $(".forgot-password-form-2").fadeIn('fast');
         $(".forgot-password-form-3").fadeOut('fast');
