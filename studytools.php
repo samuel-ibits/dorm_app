@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notebook</title>
+    <title>Studytools</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -96,7 +96,7 @@
                     <img src="images/avtr2.png" alt="">
                 </div>
                 <div class="user-info">
-                    <p class="name">Great Etubi</p>
+                    <p class="name">'.$result->name.'</p>
                     <p class="username">@'.$result->username.'</p>
                 </div>
                 <div class="icon-holder">
