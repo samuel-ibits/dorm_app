@@ -90,19 +90,21 @@
                     </li>
                 </a>
             </ul>
-            <div class="user">
+            <?php include('www.api.dorm.com.ng/profilefetch.php');
+           echo' <div class="user">
                 <div class="user-img">
                     <img src="images/avtr2.png" alt="">
                 </div>
                 <div class="user-info">
                     <p class="name">Great Etubi</p>
-                    <p class="username">@Greatetubi</p>
+                    <p class="username">@'.$result->username.'</p>
                 </div>
                 <div class="icon-holder">
                     <i class="bi bi-three-dots"></i>
                 </div>
             </div>
-        </div>
+        </div>';
+        ?>
         <div class="page-content">
             <div class="study-tools-page">
             <a href="#!" class="study-tool-card">
