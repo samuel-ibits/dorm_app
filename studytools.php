@@ -91,7 +91,7 @@
                     </li>
                 </a>
             </ul>
-            <?php include 'profile.php';
+            <?php include 'php/profile.php';
            echo' <div class="user">
                 <div class="user-img">
                     <img src="images/avtr2.png" alt="">

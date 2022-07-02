@@ -1,6 +1,5 @@
 <?php
 
-
 $url = "www.api.dorm.com.ng/profilefetch.php";
 	
 	$client = curl_init($url);
