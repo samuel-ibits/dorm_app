@@ -33,14 +33,15 @@
                     <img src="images/dorm_no_bg.png" alt="">
                 </div>
                 <h3>Forgot Password</h3>
+                <h4 id="error">error</h4>
                 <form action="#!" class="forgot-password-form-1">
                     <h4>STEP 1</h4>
                     <div class="input-holder">
-                        <ion-icon name="person"></ion-icon> <input required type="text" placeholder="Username">
+                        <ion-icon name="person"></ion-icon> <input required id="uname" type="text" placeholder="Username">
                     </div>
 
                     <div class="input-holder">
-                        <ion-icon name="call"></ion-icon> <input required type="text" placeholder="Phone number">
+                        <ion-icon name="call"></ion-icon> <input required  id="phone" type="text" placeholder="Phone number">
                     </div>
                     <div class="input-holder">
                         <button type=submit onclick="getcode()" class="sign-up-btn get-code">GET CODE</button>
@@ -194,7 +195,7 @@ var ndel= can.id;
 var xhttps= new XMLHttpRequest();
 xhttps.onreadystatechange= function(){
 	if(xhttps.readyState == 4 && xhttps.status == 200){
-document.getElementById("deletemess").innerHTML=xhttps.responseText;
+document.getElementById("error").innerHTML=xhttps.responseText;
 
 }
 };
