@@ -1,4 +1,4 @@
-<?php include '../php/autologin.php';
+<?php include 'php/autologin.php';
 ?>
 
 <!DOCTYPE html>
