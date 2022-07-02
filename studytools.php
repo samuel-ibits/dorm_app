@@ -91,7 +91,7 @@
                     </li>
                 </a>
             </ul>
-            <?php include('www.api.dorm.com.ng/profilefetch.php');
+            <?php include 'profile.php';
            echo' <div class="user">
                 <div class="user-img">
                     <img src="images/avtr2.png" alt="">
