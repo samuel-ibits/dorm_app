@@ -7,29 +7,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notebook</title>
+    <title>Noteweb</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/mynote.css">
+    <link rel="stylesheet" href="css/noteweb.css">
     <link rel="stylesheet" href="css/studytools.css">
     <link rel="stylesheet" href="css/menucss.css">
-    
+    <link rel="stylesheet" href="css/notebook.css">
 </head>
 
 <body>
-
     <div class="study-tools-tool-holder">
         <div class="study-tool-tool">
             <ul class="tool-icon-holder">
-                <li class="tool-icon"><a href="notebook.html"><img src="images/nootbook.png" alt=""></a></li>
-                <li class="tool-icon"><a href="noteweb.html"><img src="images/upload.png" alt=""></a></li>
-                <li class="tool-icon"><a href=""><img src="images/calculator.png" alt=""></a></li>
-                <li class="tool-icon"><a href="library.html"><img src="images/book.png" alt=""></a></li>
-                <li class="tool-icon"><a href=""><img src="images/monitor.png" alt=""></a></li>
-            </ul>
+                <ul class="tool-icon-holder">
+                    <li class="active-tool-icon tool-icon"><a href=""><img src="images/nootbook.png" alt=""></a></li>
+                    <li class="tool-icon"><a href="noteweb.html"><img src="images/upload.png" alt=""></a></li>
+                    <li class="tool-icon"><a href=""><img src="images/calculator.png" alt=""></a></li>
+                    <li class="tool-icon"><a href="library.html"><img src="images/book.png" alt=""></a></li>
+                    <li class="tool-icon"><a href=""><img src="images/monitor.png" alt=""></a></li>
+                </ul>
         </div>
         <div class="study-tool-tools-toggle">
             <span class="grid-icon">
@@ -39,8 +41,9 @@
                 <ion-icon name="close"></ion-icon>
             </span>
         </div>
-
     </div>
+
+
     <div class="top-mobile-menu">
         <div class="mobile-logo"><img src="images/dorm_no_bg.png" alt=""></div>
 
@@ -104,86 +107,61 @@
             </div>
         </div>
         <div class="page-content">
-            <div class="study-tools-page">
-            <a href="#!" class="study-tool-card">
-                
-                    <div class="center">
-                        <div class="study-tool-icon">
-                            <img src="images/nootbook.png" alt="">
-                        </div>
-                    </div>
-                    <div class="study-tool-info">
-                        <p class="study-tool-title">NOTE BOOK</p>
-                        <p class="study-tool-sub-text">Take notes online</p>
-                    </div>
-                
-            </a>
-               <a href="noteweb.html" class="study-tool-card">
-                
-                    <div class="center">
-                        <div class="study-tool-icon">
-                            <img src="images/upload.png" alt="">
-                        </div>
-                    </div>
-                    <div class="study-tool-info">
-                        <p class="study-tool-title">NOTE WEB</p>
-                        <p class="study-tool-sub-text">Save your notes online</p>
-                    </div>
-                
-               </a>
-               <a href="" class="study-tool-card">
-                
-                    <div class="center">
-                        <div class="study-tool-icon">
-                            <img src="images/calculator.png" alt="">
-                        </div>
-                    </div>
-                    <div class="study-tool-info">
-                        <p class="study-tool-title">CGPA CALCULATOR</p>
-                        <p class="study-tool-sub-text">calculate your cumulative grade point</p>
-                    </div>
-                
-               </a>
-               <a href="library.html" class="study-tool-card">
-                
-                    <div class="center">
-                        <div class="study-tool-icon">
-                            <img src="images/book.png" alt="">
-                        </div>
-                    </div>
-                    <div class="study-tool-info">
-                        <p class="study-tool-title">LIBRARY</p>
-                        <p class="study-tool-sub-text">get access to numerous study material</p>
-                    </div>
-                
-               </a>
+            <div class="notebookpage">
+                <div class="notebook">
+                    <input type="text" placeholder="Title of note">
 
-               <a href="" class="study-tool-card">
-                
-                    <div class="center">
-                        <div class="study-tool-icon">
-                            <img src="images/monitor.png" alt="">
-                        </div>
-                    </div>
-                    <div class="study-tool-info">
-                        <p class="study-tool-title">CBT</p>
-                        <p class="study-tool-sub-text">Test yourself with several past questions</p>
-                    </div>
-                
-               </a>
+                    <textarea name="" placeholder="Start typing your note...." id="" cols="30" rows="10"></textarea>
+
+                </div>
+                <div class="save">
+                    <button>SAVE</button>
+                </div>
+               
             </div>
         </div>
         <div class="page-side">
-            <div class="side-search">
-                <div class="searchinputholder">
-                    <ion-icon name="search"></ion-icon>
-                    <input type="text" placeholder="Search for note">
-                </div>
-                <button class="big-orange">SEARCH</button>
-            </div>
+            <div class="blue-area">
+                <p class="heading-text">Study tools</p>
 
-            <div class="notification-holder">
-                <ion-icon name="notifications"></ion-icon>
+                <div class="bottom-side-list">
+                    <ul class="menu-list more-padding text-smaller">
+                        <a href="notebook.html">
+                            <li class="active-tool-icon  menu-item">
+                                <div class="icon-img-small-icon"><img src="images/nootbook.png" alt=""></div>
+                                <p class="menu-list-title-sub-side">Note Book</p>
+                            </li>
+                        </a>
+
+                        <a href="noteweb.html">
+                            <li class="menu-item">
+                                <div class="icon-img-small-icon"><img src="images/upload.png" alt=""></div>
+                                <p class="menu-list-title-sub-side">Note Web</p>
+                            </li>
+                        </a>
+                        <a href="">
+                            <li class="menu-item">
+                                <div class="icon-img-small-icon"><img src="images/calculator.png" alt=""></div>
+                                <p class="menu-list-title-sub-side">CGPA Calculator</p>
+                            </li>
+                        </a>
+                        <a href="library.html">
+                            <li class="menu-item">
+                                <div class="icon-img-small-icon"><img src="images/book.png" alt=""></div>
+                                <p class="menu-list-title-sub-side">Library</p>
+                            </li>
+                        </a>
+                        <a href="cbt-test.html">
+                            <li class="menu-item">
+                                <div class="icon-img-small-icon"><img src="images/monitor.png" alt=""></div>
+                                <p class="menu-list-title-sub-side">CBT Test</p>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="notification-holder-3">
+                    <ion-icon name="notifications"></ion-icon>
+                </div>
             </div>
         </div>
     </div>
@@ -194,12 +172,14 @@
             $(".study-tool-tool").fadeToggle('fast');
             $(".grid-icon").fadeToggle('fast');
             $(".close-icon").fadeToggle('fast');
+
         });
 
         $(".close-icon").click(function () {
             $(".study-tool-tool").fadeToggle('fast');
             $(".grid-icon").fadeToggle('fast');
             $(".close-icon").fadeToggle('fast');
+
         });
     </script>
 </body>
