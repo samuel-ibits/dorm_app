@@ -7,7 +7,7 @@ $url = "https://api.dorm.com.ng/profilefetch.php";
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
-	echo $_COOKIE['dormtoken'].$_COOKIE['dormpage'].$_COOKIE['dormuserid'];
+	echo'test'. $_COOKIE['dormtoken'].$_COOKIE['dormpage'].$_COOKIE['dormuserid'];
 	echo"sdds". $result->phone;
   
 	?>
