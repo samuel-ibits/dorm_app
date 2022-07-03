@@ -1,5 +1,3 @@
-<?php include 'php/autologin.php';
-?>
 
 <!DOCTYPE html>
 <html lang="en">
