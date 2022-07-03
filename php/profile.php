@@ -8,6 +8,6 @@ $url = "www.api.dorm.com.ng/profilefetch.php";
 	
 	$result = json_decode($response);
 	
-	echo $result;
-    
+	echo $result->name;
+    echo $response->name;
 	?>
