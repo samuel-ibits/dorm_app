@@ -1,6 +1,6 @@
 <?php
 
-$url = "www.api.dorm.com.ng/profilefetch.php";
+$url = "https://api.dorm.com.ng/profilefetch.php";
 	
 	$client = curl_init($url);
 	curl_setopt($client,CURLOPT_RETURNTRANSFER,true);
@@ -9,5 +9,5 @@ $url = "www.api.dorm.com.ng/profilefetch.php";
 	$result = json_decode($response);
 	
 	echo $result->name;
-    echo $response->name;
+  
 	?>
