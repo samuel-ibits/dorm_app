@@ -10,6 +10,7 @@ function getter($url) {
     return $data;
 }
 $token=$_COOKIE['dormtoken'];
+echo $token;
 echo getter('https://api.dorm.com.ng/profilefetch.php?token='.$token);
 	
 	?>
