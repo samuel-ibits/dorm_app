@@ -12,7 +12,7 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p."";
 	
 	$result = json_decode($response);
 	print_r($result);
-	
+
 	$userid=$result->userid;
 	$token=$result->tokenid;
 
@@ -22,6 +22,8 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p."";
 	
 	
 	if($result->response_code==200){
+		Echo '<script type="text/Javascript">alert("login Succesful");</script>';
+
 Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/studytools.php";</script>';
 	}
 
