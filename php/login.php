@@ -16,7 +16,7 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p."";
 	$token=$result->userid;
 
 	
-	setcookie("dormpage", "studytools.php", time() + (86400 * 30), "/"); // 86400 = 1 day
+	setcookie("dormpage", "studytools.php", time() + (86400 * 30)); // 86400 = 1 day
 	
 	
 	
