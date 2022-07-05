@@ -11,7 +11,7 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p."";
 	$response = curl_exec($client);
 	
 	$result = json_decode($response);
-	echo $result;
+	print_r($result);
 	$userid=$result->userid;
 	$token=$result->tokenid;
 
