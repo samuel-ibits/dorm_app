@@ -22,8 +22,13 @@ $url = "https://api.dorm.com.ng/loginapi.php?phone=".$u."&pass=".$p."";
 	
 	if($result->response_code==200){
 Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/studytools.php";</script>';
-	}else{
-		echo $result->response_code.$result->userid;
+	}
+
+	if($result->response_code==500){
+		Echo '<script type="text/Javascript">alert("login failed check password and try again");</script>';
+
+		Echo '<script type="text/Javascript">window.location.href ="https://app.dorm.com.ng/index.php";</script>';
+	
 	}
     
 	?>
