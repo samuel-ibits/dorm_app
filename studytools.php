@@ -97,8 +97,8 @@
                     <img src="images/avtr2.png" alt="">
                 </div>
                 <div class="user-info">
-                    <p class="name">'.$name.'</p>
-                    <p class="username">@'.$username.'</p>
+                    <p class="name">'.$result->name.'</p>
+                    <p class="username">@'.$result->username.'</p>
                 </div>
                 <div class="icon-holder">
                     <i class="bi bi-three-dots"></i>
